@@ -1,0 +1,16 @@
+{
+  "name": "dishes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongod": "^2.0.0",
+    "mongoose": "^5.13.22"
+  },
+  "author": "",
+  "license": "ISC"
+}
