@@ -1,5 +1,3 @@
-// import { createTourElement } from "./helpers";
-
 (function ($) {
   "use strict";
 
@@ -78,7 +76,9 @@
 
 async function fetchAllTours() {
   try {
-    const response = await fetch("/tours/all");
+    const response = await fetch(
+      "http://localhost:3000/tours/all"
+    );
     const data = await response.json();
     console.log("allTours", data);
 
@@ -127,8 +127,7 @@ async function fetchAllTours() {
     }
   } catch (error) {
     console.error("Error fetching tours:", error);
-    const resultsDiv =
-      document.getElementById("resultsDiv");
+    const resultsDiv = document.getElementById("results");
     resultsDiv.textContent = "Error fetching tours";
   }
 }
@@ -156,7 +155,9 @@ document
     console.log(query);
 
     try {
-      const response = await fetch(`/tours?${query}`);
+      const response = await fetch(
+        `http://localhost:3000/tours?${query}`
+      );
       const data = await response.json();
       console.log("data", data);
 

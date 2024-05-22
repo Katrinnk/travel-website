@@ -5,8 +5,14 @@ const path = require("path");
 
 const app = express();
 
+const DB_LOCAL = "mongodb://localhost:27017/tourism";
+const DB_HOST =
+  "mongodb+srv://katerin69llobster:2bBqXIYWfgdf9Gt2@tourism.rp7etgr.mongodb.net/tourism";
+
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(
+  express.static(path.join(__dirname, "../front/public"))
+);
 
 app.get("/tours", async (req, res) => {
   const { name, region } = req.query;
@@ -55,9 +61,7 @@ app.use((err, req, res, next) => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://katerin69llobster:2bBqXIYWfgdf9Gt2@tourism.rp7etgr.mongodb.net/tourism"
-  )
+  .connect(DB_HOST || DB_LOCAL)
   .then(() => {
     console.log("Connected to MongoDB");
   })

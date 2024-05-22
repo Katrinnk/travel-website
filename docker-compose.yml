@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: ./server
+    container_name: travel-server
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URL=mongodb://localhost:27017/tourism
+
+  frontend:
+    build:
+      context: ./front
+    container_name: travel-front
+    ports:
+      - "8080:80"
+    depends_on:
+      - server
