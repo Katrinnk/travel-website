@@ -10099,7 +10099,8 @@ h6,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(../img/carousel-2.jpg), no-repeat center center;
+    url(https://images.unsplash.com/photo-1639341267320-2d062b250c0d?q=80&w=3329&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D),
+    no-repeat center center;
   background-size: cover;
 }
 

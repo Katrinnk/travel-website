@@ -80,47 +80,89 @@ async function fetchAllTours() {
       "http://localhost:3000/tours/all"
     );
     const data = await response.json();
-    console.log("allTours", data);
 
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = ""; // Очистити попередні результати
 
     if (data.length > 0) {
       data.forEach((tour) => {
+        const colDiv = document.createElement("div");
+        colDiv.classList.add(
+          "col-lg-4",
+          "col-md-6",
+          "mb-4"
+        );
+
         const tourDiv = document.createElement("div");
-        const tourDivClasses =
-          "tour destination-item position-relative overflow-hidden mb-2 d-flex justify-content-center";
-        tourDivClasses
-          .split(" ")
-          .forEach((cls) => tourDiv.classList.add(cls));
+        tourDiv.classList.add(
+          "tour",
+          "destination-item",
+          "position-relative",
+          "overflow-hidden",
+          "d-flex",
+          "justify-content-center"
+        );
+        tourDiv.setAttribute("data-toggle", "modal");
+        tourDiv.setAttribute("data-target", "#tourModal");
 
         const tourImg = document.createElement("img");
+        tourImg.src = tour.main_img;
         tourImg.classList.add("img-fluid");
-        tourImg.src = `${tour.main_img}`;
+        tourImg.style.height = "200px";
+        tourImg.style.width = "100%";
+        tourImg.style.objectFit = "cover";
 
         const tourTextWrap = document.createElement("div");
-        const tourTextWrapClasses =
-          "destination-overlay text-white text-decoration-none";
-        tourTextWrapClasses
-          .split(" ")
-          .forEach((cls) =>
-            tourTextWrap.classList.add(cls)
-          );
+        tourTextWrap.classList.add(
+          "destination-overlay",
+          "text-white",
+          "text-decoration-none"
+        );
 
         const tourName = document.createElement("h5");
         tourName.classList.add("text-white");
         tourName.textContent = tour.name;
 
-        const dishRegion = document.createElement("span");
-        dishRegion.textContent = `Region: ${tour.region}`;
+        const tourRegion = document.createElement("span");
+        tourRegion.textContent = `Region: ${tour.region}`;
+
+        tourTextWrap.appendChild(tourName);
+        tourTextWrap.appendChild(tourRegion);
 
         tourDiv.appendChild(tourImg);
         tourDiv.appendChild(tourTextWrap);
-        tourTextWrap.appendChild(tourName);
-        //   tourDiv.appendChild(tourDescription);
-        tourTextWrap.appendChild(dishRegion);
 
-        resultsDiv.appendChild(tourDiv);
+        colDiv.appendChild(tourDiv);
+        resultsDiv.appendChild(colDiv);
+
+        tourDiv.addEventListener("click", function () {
+          const modalTitle = document.getElementById(
+            "tourModalTitle"
+          );
+          const modalBody =
+            document.getElementById("tourModalBody");
+          modalTitle.textContent = tour.name;
+          modalBody.innerHTML = `
+            <p><strong>Region:</strong> ${tour.region}</p>
+            <p><strong>Description:</strong> ${
+              tour.description ||
+              "No description available."
+            }</p>
+            <a href='https://www.google.com/maps/place/%D0%9F%D0%BB%D0%B5%D0%B1%D0%B0%D0%BD%D1%96%D0%B2%D0%BA%D0%B0,+%D0%A2%D0%B5%D1%80%D0%BD%D0%BE%D0%BF%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@49.2815217,25.7027719,14z/data=!3m1!4b1!4m6!3m5!1s0x4731b0392c18c603:0x8cd635fe2574d55a!8m2!3d49.2768383!4d25.7368451!16s%2Fg%2F1221sgmn?entry=ttu' target="_blank"><p class='text-center'>Location</p></a>
+            <img src="${
+              tour.main_img
+            }" class="img-fluid" alt="${tour.name}">
+            <img src="${
+              tour.imgs[0]
+            }" class="img-fluid" alt="${tour.name}">
+            <img src="${
+              tour.imgs[1]
+            }" class="img-fluid" alt="${tour.name}">
+            <img src="${
+              tour.imgs[2]
+            }" class="img-fluid" alt="${tour.name}">
+          `;
+        });
       });
     } else {
       resultsDiv.textContent = "No tours found";
@@ -132,6 +174,11 @@ async function fetchAllTours() {
   }
 }
 
+document.addEventListener(
+  "DOMContentLoaded",
+  fetchAllTours
+);
+
 // Виклик функції при завантаженні сторінки
 document.addEventListener(
   "DOMContentLoaded",
@@ -142,13 +189,13 @@ document
   .getElementById("searchForm")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
-    const name = document.getElementById("name").value;
+    const city = document.getElementById("city").value;
     const region = document.getElementById("region").value;
     const resultsDiv = document.getElementById("results");
 
     // Build query string
     let query = "";
-    if (name) query += `name=${name}`;
+    if (city) query += `city=${city}`;
     if (region)
       query += `${query ? "&" : ""}region=${region}`;
 
@@ -159,48 +206,57 @@ document
         `http://localhost:3000/tours?${query}`
       );
       const data = await response.json();
-      console.log("data", data);
 
       if (data.message === "success") {
-        console.log(data.data);
-        // Clear previous results
         resultsDiv.innerHTML = "";
         data.data.forEach((tour) => {
+          const colDiv = document.createElement("div");
+          colDiv.classList.add(
+            "col-lg-4",
+            "col-md-6",
+            "mb-4"
+          );
+
           const tourDiv = document.createElement("div");
-          const tourDivClasses =
-            "tour destination-item position-relative overflow-hidden mb-2 d-flex justify-content-center";
-          tourDivClasses
-            .split(" ")
-            .forEach((cls) => tourDiv.classList.add(cls));
+          tourDiv.classList.add(
+            "tour",
+            "destination-item",
+            "position-relative",
+            "overflow-hidden",
+            "d-flex",
+            "justify-content-center"
+          );
 
           const tourImg = document.createElement("img");
+          tourImg.src = tour.main_img;
           tourImg.classList.add("img-fluid");
-          tourImg.src = `${tour.main_img}`;
+          tourImg.style.height = "200px";
+          tourImg.style.width = "100%";
+          tourImg.style.objectFit = "cover";
 
           const tourTextWrap =
             document.createElement("div");
-          const tourTextWrapClasses =
-            "destination-overlay text-white text-decoration-none";
-          tourTextWrapClasses
-            .split(" ")
-            .forEach((cls) =>
-              tourTextWrap.classList.add(cls)
-            );
+          tourTextWrap.classList.add(
+            "destination-overlay",
+            "text-white",
+            "text-decoration-none"
+          );
 
           const tourName = document.createElement("h5");
           tourName.classList.add("text-white");
           tourName.textContent = tour.name;
 
-          const dishRegion = document.createElement("span");
-          dishRegion.textContent = `Region: ${tour.region}`;
+          const tourRegion = document.createElement("span");
+          tourRegion.textContent = `Region: ${tour.region}`;
+
+          tourTextWrap.appendChild(tourName);
+          tourTextWrap.appendChild(tourRegion);
 
           tourDiv.appendChild(tourImg);
           tourDiv.appendChild(tourTextWrap);
-          tourTextWrap.appendChild(tourName);
-          //   tourDiv.appendChild(tourDescription);
-          tourTextWrap.appendChild(dishRegion);
 
-          resultsDiv.appendChild(tourDiv);
+          colDiv.appendChild(tourDiv);
+          resultsDiv.appendChild(colDiv);
         });
       } else {
         resultsDiv.textContent = "No dishes found";

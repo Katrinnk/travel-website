@@ -18,8 +18,6 @@ app.get("/tours", async (req, res) => {
   const { name, region } = req.query;
   let query = {};
 
-  console.log("query", query);
-
   if (name) {
     query.name = new RegExp(name, "i");
   }
@@ -48,7 +46,6 @@ app.get("/tours", async (req, res) => {
 app.get("/tours/all", async (req, res) => {
   try {
     const allTours = await Tour.find();
-    console.log("allTours", allTours);
     res.status(200).json(allTours);
   } catch (err) {
     res.status(400).json({ error: err.message });
