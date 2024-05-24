@@ -30,6 +30,58 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      .about-section {
+        padding: 60px 0;
+      }
+      .about-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        text-align: center;
+      }
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: justify;
+      }
+      .section-divider {
+        border-top: 2px solid #ddd;
+        margin: 40px 0;
+      }
+      .about-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+      .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .about-content img {
+        max-width: 45%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+      }
+      .about-content div {
+        flex: 1;
+      }
+      .about-section::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: #007bff;
+      }
+    </style>
   </head>
 
   <body>
@@ -65,7 +117,7 @@
         style="z-index: 9">
         <nav
           class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-          <a href="" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <h1 class="m-0 text-primary">
               <span class="text-dark">UKRAINE</span>TOUR
             </h1>
@@ -110,9 +162,15 @@
           <h3 class="display-4 text-white text-uppercase">
             About Ukraine
           </h3>
+          <p class="text-white">
+            Discover the rich history, vibrant culture, and
+            diverse geography of Ukraine.
+          </p>
           <div class="d-inline-flex text-white">
             <p class="m-0 text-uppercase">
-              <a class="text-white" href="">Home</a>
+              <a class="text-white" href="index.html"
+                >Home</a
+              >
             </p>
             <i
               class="fa fa-angle-double-right pt-1 px-3"></i>
@@ -123,282 +181,98 @@
     </div>
     <!-- Header End -->
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-lg-6" style="min-height: 500px">
-            <div class="position-relative h-100">
-              <img
-                class="position-absolute w-100 h-100"
-                src="img/about.jpg"
-                style="object-fit: cover" />
-            </div>
+    <div class="container about-section">
+      <div class="row" id="history">
+        <div class="col-lg-12 about-content">
+          <img
+            src="https://images.unsplash.com/photo-1587667624448-972b1399a0d1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="History of Ukraine"
+            class="about-img" />
+          <div>
+            <h2>History of Ukraine</h2>
+            <p>
+              Ukraine boasts a rich and complex history that
+              stretches back thousands of years. From the
+              ancient civilizations of Trypillians and
+              Scythians to the powerful medieval state of
+              Kyivan Rus, and through the struggles and
+              triumphs of modern times, Ukraine's history is
+              a testament to resilience and cultural
+              richness. Key historical moments include the
+              Cossack era, the rise and fall of empires, the
+              Soviet period, and the journey to independence
+              in 1991. This historical journey is marked by
+              a profound sense of national identity and a
+              continuous quest for freedom and sovereignty.
+            </p>
           </div>
-          <div class="col-lg-6 pt-5 pb-lg-5">
-            <div
-              class="about-text bg-white p-4 p-lg-5 my-lg-5">
-              <h6
-                class="text-primary text-uppercase"
-                style="letter-spacing: 5px">
-                About Us
-              </h6>
-              <h1 class="mb-3">
-                We Provide Best Tour Packages In Your Budget
-              </h1>
-              <p>
-                Dolores lorem lorem ipsum sit et ipsum.
-                Sadip sea amet diam dolore sed et. Sit rebum
-                labore sit sit ut vero no sit. Et elitr stet
-                dolor sed sit et sed ipsum et kasd ut. Erat
-                duo eos et erat sed diam duo
-              </p>
-              <div class="row mb-4">
-                <div class="col-6">
-                  <img
-                    class="img-fluid"
-                    src="img/about-1.jpg"
-                    alt="" />
-                </div>
-                <div class="col-6">
-                  <img
-                    class="img-fluid"
-                    src="img/about-2.jpg"
-                    alt="" />
-                </div>
-              </div>
-              <a href="" class="btn btn-primary mt-1"
-                >Book Now</a
-              >
-            </div>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+      <div class="row" id="culture">
+        <div class="col-lg-12 about-content">
+          <img
+            src="https://cdn.wionews.com/sites/default/files/2022/02/27/243898-3.jpg"
+            alt="Culture of Ukraine"
+            class="about-img" />
+          <div>
+            <h2>Culture of Ukraine</h2>
+            <p>
+              The cultural landscape of Ukraine is as
+              diverse and vibrant as its history. Renowned
+              for its folk traditions, Ukraine's culture is
+              expressed through music, dance, literature,
+              and art. Traditional Ukrainian music, with its
+              distinctive melodies and instruments,
+              accompanies dances that are both energetic and
+              graceful. Ukrainian literature, from the epic
+              poetry of Taras Shevchenko to contemporary
+              works, reflects the nation's spirit and
+              struggles. Festivals and holidays, such as
+              Easter and Ivana Kupala, are celebrated with
+              colorful rituals and customs that have been
+              passed down through generations. Ukraine's
+              cultural heritage also includes a rich
+              tapestry of languages, cuisines, and religious
+              traditions, all contributing to the nation's
+              unique identity.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+      <div class="row" id="geography">
+        <div class="col-lg-12 about-content">
+          <img
+            src="https://media.istockphoto.com/id/864921636/photo/beautiful-morning-in-the-ukrainian-carpathians.jpg?s=612x612&w=0&k=20&c=LeNCO8Jo2UPgWmAnQnAckNsCr47koKTZi-ZZXYldVaY="
+            alt="Geography of Ukraine"
+            class="about-img" />
+          <div>
+            <h2>Geography of Ukraine</h2>
+            <p>
+              Ukraine's geography is as diverse as its
+              culture and history, offering a wide range of
+              natural landscapes. From the scenic Carpathian
+              Mountains in the west to the vast steppes and
+              fertile plains of the central and eastern
+              regions, and the picturesque Black Sea
+              coastline in the south, Ukraine's terrain is
+              varied and beautiful. The country's extensive
+              network of rivers, including the mighty
+              Dnipro, has historically been crucial for
+              trade, travel, and agriculture. Ukraine's
+              natural beauty is complemented by numerous
+              national parks and nature reserves, making it
+              a haven for outdoor enthusiasts and nature
+              lovers. This geographical diversity not only
+              provides stunning vistas but also supports a
+              rich biodiversity and offers numerous
+              opportunities for tourism and adventure.
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <!-- About End -->
-
-    <!-- Feature Start -->
-    <div class="container-fluid pb-5">
-      <div class="container pb-5">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="d-flex mb-4 mb-lg-0">
-              <div
-                class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
-                style="height: 100px; width: 100px">
-                <i
-                  class="fa fa-2x fa-money-check-alt text-white"></i>
-              </div>
-              <div class="d-flex flex-column">
-                <h5 class="">Competitive Pricing</h5>
-                <p class="m-0">
-                  Magna sit magna dolor duo dolor labore
-                  rebum amet elitr est diam sea
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="d-flex mb-4 mb-lg-0">
-              <div
-                class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
-                style="height: 100px; width: 100px">
-                <i class="fa fa-2x fa-award text-white"></i>
-              </div>
-              <div class="d-flex flex-column">
-                <h5 class="">Best Services</h5>
-                <p class="m-0">
-                  Magna sit magna dolor duo dolor labore
-                  rebum amet elitr est diam sea
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="d-flex mb-4 mb-lg-0">
-              <div
-                class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
-                style="height: 100px; width: 100px">
-                <i class="fa fa-2x fa-globe text-white"></i>
-              </div>
-              <div class="d-flex flex-column">
-                <h5 class="">Worldwide Coverage</h5>
-                <p class="m-0">
-                  Magna sit magna dolor duo dolor labore
-                  rebum amet elitr est diam sea
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Feature End -->
-
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
-      <div class="container pt-5 pb-3">
-        <div class="text-center mb-3 pb-3">
-          <h6
-            class="text-primary text-uppercase"
-            style="letter-spacing: 5px">
-            Guides
-          </h6>
-          <h1>Our Travel Guides</h1>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="team-item bg-white mb-4">
-              <div
-                class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="img/team-1.jpg"
-                  alt="" />
-                <div class="team-social">
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="text-center py-4">
-                <h5 class="text-truncate">Guide Name</h5>
-                <p class="m-0">Designation</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="team-item bg-white mb-4">
-              <div
-                class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="img/team-2.jpg"
-                  alt="" />
-                <div class="team-social">
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="text-center py-4">
-                <h5 class="text-truncate">Guide Name</h5>
-                <p class="m-0">Designation</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="team-item bg-white mb-4">
-              <div
-                class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="img/team-3.jpg"
-                  alt="" />
-                <div class="team-social">
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="text-center py-4">
-                <h5 class="text-truncate">Guide Name</h5>
-                <p class="m-0">Designation</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="team-item bg-white mb-4">
-              <div
-                class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid w-100"
-                  src="img/team-4.jpg"
-                  alt="" />
-                <div class="team-social">
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                  <a
-                    class="btn btn-outline-primary btn-square"
-                    href=""
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="text-center py-4">
-                <h5 class="text-truncate">Guide Name</h5>
-                <p class="m-0">Designation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
 
     <!-- Footer Start -->
     <div
@@ -406,7 +280,7 @@
       style="margin-top: 90px">
       <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-3">
-          <a href="" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <h1 class="text-primary">
               <span class="text-white">UKRAINE</span>TOUR
             </h1>
@@ -429,21 +303,15 @@
           </h5>
           <div
             class="d-flex flex-column justify-content-start">
-            <a class="text-white-50 mb-2" href="#"
+            <a
+              class="text-white-50 mb-2"
+              href="experiences.html"
               ><i class="fa fa-angle-right mr-2"></i
-              >Cultural Tours</a
+              >Experiences</a
             >
-            <a class="text-white-50 mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Nature
-              & Adventure</a
-            >
-            <a class="text-white-50 mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i
-              >Wellness & Spa</a
-            >
-            <a class="text-white-50 mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i
-              >Festaival & Event</a
+            <a class="text-white-50 mb-2" href="about.html"
+              ><i class="fa fa-angle-right mr-2"></i>About
+              Ukraine</a
             >
           </div>
         </div>
@@ -455,15 +323,15 @@
           </h5>
           <div
             class="d-flex flex-column justify-content-start">
-            <a class="text-white-50 mb-2" href="#"
+            <a class="text-white-50 mb-2" href="#history"
               ><i class="fa fa-angle-right mr-2"></i
               >History</a
             >
-            <a class="text-white-50 mb-2" href="#"
+            <a class="text-white-50 mb-2" href="#culture"
               ><i class="fa fa-angle-right mr-2"></i
               >Culture</a
             >
-            <a class="text-white-50 mb-2" href="#"
+            <a class="text-white-50 mb-2" href="#geography"
               ><i class="fa fa-angle-right mr-2"></i
               >Geography</a
             >
@@ -510,5 +378,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

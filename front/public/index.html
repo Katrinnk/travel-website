@@ -19,6 +19,24 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .custom-link {
+    color: inherit; /* Inherit color from the parent element */
+    text-decoration: none; /* Remove the underline */
+}
+
+.custom-link:hover .service-item {
+    background-color: #f8f9fa; /* Example hover effect */
+}
+
+.custom-link h5,
+.custom-link p,
+.custom-link i {
+    color: #6c757d; /* Set the desired color for text */
+}
+
+    </style>
 </head>
 
 <body>
@@ -42,7 +60,7 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <h1 class="m-0 text-primary"><span class="text-dark">UKRAINE</span>TOUR</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -69,7 +87,7 @@
                     <img class="w-100" src="https://images.unsplash.com/photo-1529511582893-2d7e684dd128?q=80&w=3339&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="pt-3 pb-5" style="max-width: 900px;">
-                            <h1 class="display-3 text-white mb-md-4">Unveil the Mysteries of Ukraine: Where History Meets Adventure</h1>
+                            <h1 class="display-3 text-white mb-md-4">Unveil the mysteries of Ukraine: where history meets adventure</h1>
                         </div>
                     </div>
                 </div>
@@ -88,7 +106,7 @@
                     <div class="col-md-10 offset-md-1">
                         <form id="searchForm" class="row g-3 pl-5">
                             <div class="col-md-4">
-                                <input type="text" id="city" class="form-control" placeholder="City">
+                                <input type="text" id="name" class="form-control" placeholder="City">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" id="region" class="form-control" placeholder="Region">
@@ -155,25 +173,31 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="about.html#history" class="text-decoration-none custom-link">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
                         <h5 class="mb-2">History</h5>
                         <p class="m-0">Ukraine's rich history is a tapestry of ancient civilizations, resilient struggles for independence, and vibrant cultural evolution.</p>
                     </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="about.html#culture" class="text-decoration-none custom-link">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
                         <h5 class="mb-2">Culture</h5>
                         <p class="m-0">Ukraine's culture is a vibrant mosaic of traditional folk arts, unique customs, and a thriving contemporary arts scene.</p>
                     </div>
+                </a>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="about.html#geography" class="text-decoration-none custom-link">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
                         <h5 class="mb-2">Geography</h5>
                         <p class="m-0">Explore the geographical diversity of Ukraine, from its majestic mountains to its vast plains, offering an array of breathtaking landscapes to discover.</p>
                     </div>
+                </a>
                 </div>
             </div>
         </div>
@@ -185,7 +209,7 @@
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-3">
-                <a href="" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <h1 class="text-primary"><span class="text-white">UKRAINE</span>TOUR</h1>
                 </a>
                 <p>Ukraine Tour is a website offering a wide range of tourist routes and trips across Ukraine, providing detailed information about the most popular tourist destinations and cities. Users can easily find and book tours, with access to descriptions, photos, and reviews from other travelers.</p>
@@ -193,18 +217,16 @@
             <div class="col-lg-3 col-md-6 mb-3 mt-3">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Cultural Tours</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nature & Adventure</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Wellness & Spa</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Festaival & Event</a>
-                </div>
+                    <a class="text-white-50 mb-2" href="experiences.html"><i class="fa fa-angle-right mr-2"></i>Experiences</a>
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Ukraine</a>
+                     </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3 mt-3">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>History</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Culture</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Geography</a>
+                    <a class="text-white-50 mb-2" href="about.html#history"><i class="fa fa-angle-right mr-2"></i>History</a>
+                    <a class="text-white-50 mb-2" href="about.html#culture"><i class="fa fa-angle-right mr-2"></i>Culture</a>
+                    <a class="text-white-50 mb-2" href="about.html#geography"><i class="fa fa-angle-right mr-2"></i>Geography</a>
                      </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3 mt-3">
@@ -215,7 +237,7 @@
         </div>
     </div>
     <!-- Footer End -->
-    
+
     <!-- Modal -->
     <div class="modal fade" id="tourModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">

@@ -148,7 +148,9 @@ async function fetchAllTours() {
               tour.description ||
               "No description available."
             }</p>
-            <a href='https://www.google.com/maps/place/%D0%9F%D0%BB%D0%B5%D0%B1%D0%B0%D0%BD%D1%96%D0%B2%D0%BA%D0%B0,+%D0%A2%D0%B5%D1%80%D0%BD%D0%BE%D0%BF%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@49.2815217,25.7027719,14z/data=!3m1!4b1!4m6!3m5!1s0x4731b0392c18c603:0x8cd635fe2574d55a!8m2!3d49.2768383!4d25.7368451!16s%2Fg%2F1221sgmn?entry=ttu' target="_blank"><p class='text-center'>Location</p></a>
+            <a href='${
+              tour.location
+            }' target='_blank'><p class='text-center'>Location</p></a>
             <img src="${
               tour.main_img
             }" class="img-fluid" alt="${tour.name}">
@@ -189,17 +191,17 @@ document
   .getElementById("searchForm")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
-    const city = document.getElementById("city").value;
+    const name = document.getElementById("name").value;
     const region = document.getElementById("region").value;
     const resultsDiv = document.getElementById("results");
 
     // Build query string
     let query = "";
-    if (city) query += `city=${city}`;
+    if (name) query += `name=${name}`;
     if (region)
       query += `${query ? "&" : ""}region=${region}`;
 
-    console.log(query);
+    console.log("city", name);
 
     try {
       const response = await fetch(
@@ -226,6 +228,8 @@ document
             "d-flex",
             "justify-content-center"
           );
+          tourDiv.setAttribute("data-toggle", "modal");
+          tourDiv.setAttribute("data-target", "#tourModal");
 
           const tourImg = document.createElement("img");
           tourImg.src = tour.main_img;
@@ -257,6 +261,37 @@ document
 
           colDiv.appendChild(tourDiv);
           resultsDiv.appendChild(colDiv);
+
+          tourDiv.addEventListener("click", function () {
+            const modalTitle = document.getElementById(
+              "tourModalTitle"
+            );
+            const modalBody =
+              document.getElementById("tourModalBody");
+            modalTitle.textContent = tour.name;
+            modalBody.innerHTML = `
+              <p><strong>Region:</strong> ${tour.region}</p>
+              <p><strong>Description:</strong> ${
+                tour.description ||
+                "No description available."
+              }</p>
+              <a href='${
+                tour.location
+              }' target='_blank'><p class='text-center'>Location</p></a>
+              <img src="${
+                tour.main_img
+              }" class="img-fluid" alt="${tour.name}">
+              <img src="${
+                tour.imgs[0]
+              }" class="img-fluid" alt="${tour.name}">
+              <img src="${
+                tour.imgs[1]
+              }" class="img-fluid" alt="${tour.name}">
+              <img src="${
+                tour.imgs[2]
+              }" class="img-fluid" alt="${tour.name}">
+            `;
+          });
         });
       } else {
         resultsDiv.textContent = "No dishes found";

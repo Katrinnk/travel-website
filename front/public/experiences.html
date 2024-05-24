@@ -30,6 +30,52 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      .experience-item {
+        margin-bottom: 30px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .experience-item img {
+        width: 100%;
+        height: 250px;
+      }
+
+      .experience-content {
+        padding: 20px;
+      }
+
+      .experience-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .experience-description {
+        font-size: 16px;
+      }
+      .custom-link {
+        color: inherit; /* Inherit color from the parent element */
+        text-decoration: none; /* Remove the underline */
+      }
+
+      .custom-link:hover .experience-item,
+      .custom-link:focus .experience-item {
+        background-color: #f8f9fa; /* Example hover effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+        outline: none;
+        cursor: pointer;
+      }
+
+      .custom-link h5,
+      .custom-link p,
+      .custom-link i {
+        color: #6c757d; /* Set the desired color for text */
+      }
+    </style>
   </head>
 
   <body>
@@ -65,7 +111,7 @@
         style="z-index: 9">
         <nav
           class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-          <a href="" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <h1 class="m-0 text-primary">
               <span class="text-dark">UKRAINE</span>TOUR
             </h1>
@@ -105,12 +151,20 @@
         <div
           class="d-flex flex-column align-items-center justify-content-center"
           style="min-height: 400px">
-          <h3 class="display-4 text-white text-uppercase">
-            Experiences
+          <h3
+            class="display-4 text-white text-uppercase text-center">
+            Discover Unique Experiences in Ukraine
           </h3>
+          <p class="text-white text-center">
+            Immerse yourself in the vibrant culture, rich
+            history, and breathtaking landscapes of Ukraine.
+            Explore the unique experiences that await you!
+          </p>
           <div class="d-inline-flex text-white">
             <p class="m-0 text-uppercase">
-              <a class="text-white" href="">Home</a>
+              <a class="text-white" href="index.html"
+                >Home</a
+              >
             </p>
             <i
               class="fa fa-angle-double-right pt-1 px-3"></i>
@@ -121,601 +175,145 @@
     </div>
     <!-- Header End -->
 
-    <!-- Blog Start -->
-    <div class="container-fluid py-5">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="row pb-3">
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-1.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-2.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-3.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-1.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-2.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-3.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-1.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4 pb-2">
-                <div class="blog-item">
-                  <div class="position-relative">
-                    <img
-                      class="img-fluid w-100"
-                      src="img/blog-2.jpg"
-                      alt="" />
-                    <div class="blog-date">
-                      <h6 class="font-weight-bold mb-n1">
-                        01
-                      </h6>
-                      <small
-                        class="text-white text-uppercase"
-                        >Jan</small
-                      >
-                    </div>
-                  </div>
-                  <div class="bg-white p-4">
-                    <div class="d-flex mb-2">
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Admin</a
-                      >
-                      <span class="text-primary px-2"
-                        >|</span
-                      >
-                      <a
-                        class="text-primary text-uppercase text-decoration-none"
-                        href=""
-                        >Tours & Travel</a
-                      >
-                    </div>
-                    <a
-                      class="h5 m-0 text-decoration-none"
-                      href=""
-                      >Dolor justo sea kasd lorem clita
-                      justo diam amet</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <nav aria-label="Page navigation">
-                  <ul
-                    class="pagination pagination-lg justify-content-center bg-white mb-0"
-                    style="padding: 30px">
-                    <li class="page-item disabled">
-                      <a
-                        class="page-link"
-                        href="#"
-                        aria-label="Previous">
-                        <span aria-hidden="true"
-                          >&laquo;</span
-                        >
-                        <span class="sr-only"
-                          >Previous</span
-                        >
-                      </a>
-                    </li>
-                    <li class="page-item active">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a
-                        class="page-link"
-                        href="#"
-                        aria-label="Next">
-                        <span aria-hidden="true"
-                          >&raquo;</span
-                        >
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-5 mt-lg-0">
-            <!-- Author Bio -->
-            <div
-              class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <a
+            href="https://wondersholidays.com/uk/holiday/hastronomichni-tury/"
+            target="_blank"
+            class="custom-link text-decoration-none">
+            <div class="experience-item">
               <img
-                src="img/user.jpg"
-                class="img-fluid mx-auto mb-3"
-                style="width: 100px" />
-              <h3 class="text-primary mb-3">John Doe</h3>
-              <p>
-                Conset elitr erat vero dolor ipsum et diam,
-                eos dolor lorem, ipsum sit no ut est ipsum
-                erat kasd amet elitr
-              </p>
-              <div class="d-flex justify-content-center">
-                <a class="text-primary px-2" href="">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="text-primary px-2" href="">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a class="text-primary px-2" href="">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="text-primary px-2" href="">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a class="text-primary px-2" href="">
-                  <i class="fab fa-youtube"></i>
-                </a>
+                src="https://visitukraine.today/media/blog/previews/viGarnBskc49Fw1CnYNjKEJUFtAKLhqQfCsLxQV4.jpg"
+                alt="Culinary Adventures" />
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Culinary Adventures
+                </h3>
+                <p class="experience-description">
+                  Savor the flavors of Ukraine with
+                  traditional dishes like borscht, varenyky,
+                  and holubtsi. Join a local cooking class
+                  or enjoy a gourmet tour.
+                </p>
               </div>
             </div>
-
-            <!-- Search Form -->
-            <div class="mb-5">
-              <div class="bg-white" style="padding: 30px">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control p-4"
-                    placeholder="Keyword" />
-                  <div class="input-group-append">
-                    <span
-                      class="input-group-text bg-primary border-primary text-white"
-                      ><i class="fa fa-search"></i
-                    ></span>
-                  </div>
-                </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a
+            href="https://bls.ua/ua/blog/ukrainski-festivali"
+            target="_blank"
+            class="custom-link text-decoration-none">
+            <div class="experience-item">
+              <img
+                src="https://railrocker.com/playground/wp-content/uploads/2021/05/summersolstice_ivankupala.jpg"
+                alt="Cultural Festivals" />
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Cultural Festivals
+                </h3>
+                <p class="experience-description">
+                  Experience the vibrant traditions of
+                  Ukraine through colorful festivals
+                  celebrating music, dance, and folklore.
+                </p>
               </div>
             </div>
-
-            <!-- Category List -->
-            <div class="mb-5">
-              <h4
-                class="text-uppercase mb-4"
-                style="letter-spacing: 5px">
-                Categories
-              </h4>
-              <div class="bg-white" style="padding: 30px">
-                <ul class="list-inline m-0">
-                  <li
-                    class="mb-3 d-flex justify-content-between align-items-center">
-                    <a class="text-dark" href="#"
-                      ><i
-                        class="fa fa-angle-right text-primary mr-2"></i
-                      >Web Design</a
-                    >
-                    <span
-                      class="badge badge-primary badge-pill"
-                      >150</span
-                    >
-                  </li>
-                  <li
-                    class="mb-3 d-flex justify-content-between align-items-center">
-                    <a class="text-dark" href="#"
-                      ><i
-                        class="fa fa-angle-right text-primary mr-2"></i
-                      >Web Development</a
-                    >
-                    <span
-                      class="badge badge-primary badge-pill"
-                      >131</span
-                    >
-                  </li>
-                  <li
-                    class="mb-3 d-flex justify-content-between align-items-center">
-                    <a class="text-dark" href="#"
-                      ><i
-                        class="fa fa-angle-right text-primary mr-2"></i
-                      >Online Marketing</a
-                    >
-                    <span
-                      class="badge badge-primary badge-pill"
-                      >78</span
-                    >
-                  </li>
-                  <li
-                    class="mb-3 d-flex justify-content-between align-items-center">
-                    <a class="text-dark" href="#"
-                      ><i
-                        class="fa fa-angle-right text-primary mr-2"></i
-                      >Keyword Research</a
-                    >
-                    <span
-                      class="badge badge-primary badge-pill"
-                      >56</span
-                    >
-                  </li>
-                  <li
-                    class="d-flex justify-content-between align-items-center">
-                    <a class="text-dark" href="#"
-                      ><i
-                        class="fa fa-angle-right text-primary mr-2"></i
-                      >Email Marketing</a
-                    >
-                    <span
-                      class="badge badge-primary badge-pill"
-                      >98</span
-                    >
-                  </li>
-                </ul>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a
+            href="https://www.tripadvisor.com/Attractions-g294473-Activities-c61-Ukraine.html"
+            target="_blank"
+            class="custom-link text-decoration-none">
+            <div class="experience-item">
+              <img
+                src="https://vidviday.ua/blog/wp-content/uploads/2021/12/bukovel.jpg"
+                alt="Outdoor Activities" />
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Outdoor Activities
+                </h3>
+                <p class="experience-description">
+                  From hiking in the Carpathian Mountains to
+                  exploring the Black Sea coast, Ukraine
+                  offers diverse outdoor adventures for
+                  nature enthusiasts.
+                </p>
               </div>
             </div>
-
-            <!-- Recent Post -->
-            <div class="mb-5">
-              <h4
-                class="text-uppercase mb-4"
-                style="letter-spacing: 5px">
-                Recent Post
-              </h4>
-              <a
-                class="d-flex align-items-center text-decoration-none bg-white mb-3"
-                href="">
-                <img
-                  class="img-fluid"
-                  src="img/blog-100x100.jpg"
-                  alt="" />
-                <div class="pl-3">
-                  <h6 class="m-1">
-                    Diam lorem dolore justo eirmod lorem
-                    dolore
-                  </h6>
-                  <small>Jan 01, 2050</small>
-                </div>
-              </a>
-              <a
-                class="d-flex align-items-center text-decoration-none bg-white mb-3"
-                href="">
-                <img
-                  class="img-fluid"
-                  src="img/blog-100x100.jpg"
-                  alt="" />
-                <div class="pl-3">
-                  <h6 class="m-1">
-                    Diam lorem dolore justo eirmod lorem
-                    dolore
-                  </h6>
-                  <small>Jan 01, 2050</small>
-                </div>
-              </a>
-              <a
-                class="d-flex align-items-center text-decoration-none bg-white mb-3"
-                href="">
-                <img
-                  class="img-fluid"
-                  src="img/blog-100x100.jpg"
-                  alt="" />
-                <div class="pl-3">
-                  <h6 class="m-1">
-                    Diam lorem dolore justo eirmod lorem
-                    dolore
-                  </h6>
-                  <small>Jan 01, 2050</small>
-                </div>
-              </a>
-            </div>
-
-            <!-- Tag Cloud -->
-            <div class="mb-5">
-              <h4
-                class="text-uppercase mb-4"
-                style="letter-spacing: 5px">
-                Tag Cloud
-              </h4>
-              <div class="d-flex flex-wrap m-n1">
-                <a href="" class="btn btn-light m-1"
-                  >Design</a
-                >
-                <a href="" class="btn btn-light m-1"
-                  >Development</a
-                >
-                <a href="" class="btn btn-light m-1"
-                  >Marketing</a
-                >
-                <a href="" class="btn btn-light m-1">SEO</a>
-                <a href="" class="btn btn-light m-1"
-                  >Writing</a
-                >
-                <a href="" class="btn btn-light m-1"
-                  >Consulting</a
-                >
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a
+            href="https://wondersholidays.com/holiday/historical-tours/"
+            target="_blank"
+            class="custom-link text-decoration-none">
+            <div class="experience-item">
+              <img
+                src="https://www.ofit-travel.com.ua/en/uploads/posts/2018-03/1522057391_kamianets-podilsyi-3.jpg"
+                alt="Historical Tours" />
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Historical Tours
+                </h3>
+                <p class="experience-description">
+                  Walk through centuries of history with
+                  guided tours of ancient castles, UNESCO
+                  heritage sites, and historic cities like
+                  Kyiv and Lviv.
+                </p>
               </div>
             </div>
-          </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a
+            href="https://www.navkoloua.com/tours-ukraine/wine-tours/"
+            target="_blank"
+            class="custom-link text-decoration-none">
+            <div class="experience-item">
+              <img
+                src="https://www.holidaymoments.cz/images/our-tours/fullwidth-gallery/sklipek4.jpg"
+                alt="Wine Tasting" />
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Wine Tasting
+                </h3>
+                <p class="experience-description">
+                  Explore the burgeoning wine regions of
+                  Ukraine, sample exquisite wines, and tour
+                  scenic vineyards and cellars.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a
+            href="https://via-regia.org.ua/traditions-crafts/"
+            target="_blank"
+            class="custom-link text-decoration-none">
+            <div class="experience-item">
+              <img
+                src="https://via-regia.org.ua/wp-content/uploads/2020/11/pysankarstvo.jpg"
+                alt="Traditional Handicrafts" />
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Traditional Handicrafts
+                </h3>
+                <p class="experience-description">
+                  Discover the artistry of Ukrainian crafts,
+                  from intricate embroidery and pottery to
+                  wood carving and pysanka (decorated eggs).
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-    <!-- Blog End -->
 
     <!-- Footer Start -->
     <div
@@ -723,7 +321,7 @@
       style="margin-top: 90px">
       <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-3">
-          <a href="" class="navbar-brand">
+          <a href="index.html" class="navbar-brand">
             <h1 class="text-primary">
               <span class="text-white">UKRAINE</span>TOUR
             </h1>
@@ -746,21 +344,15 @@
           </h5>
           <div
             class="d-flex flex-column justify-content-start">
-            <a class="text-white-50 mb-2" href="#"
+            <a
+              class="text-white-50 mb-2"
+              href="experiences.html"
               ><i class="fa fa-angle-right mr-2"></i
-              >Cultural Tours</a
+              >Experiences</a
             >
-            <a class="text-white-50 mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Nature
-              & Adventure</a
-            >
-            <a class="text-white-50 mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i
-              >Wellness & Spa</a
-            >
-            <a class="text-white-50 mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i
-              >Festaival & Event</a
+            <a class="text-white-50 mb-2" href="about.html"
+              ><i class="fa fa-angle-right mr-2"></i>About
+              Ukraine</a
             >
           </div>
         </div>
@@ -772,15 +364,21 @@
           </h5>
           <div
             class="d-flex flex-column justify-content-start">
-            <a class="text-white-50 mb-2" href="#"
+            <a
+              class="text-white-50 mb-2"
+              href="about.html#history"
               ><i class="fa fa-angle-right mr-2"></i
               >History</a
             >
-            <a class="text-white-50 mb-2" href="#"
+            <a
+              class="text-white-50 mb-2"
+              href="about.html#culture"
               ><i class="fa fa-angle-right mr-2"></i
               >Culture</a
             >
-            <a class="text-white-50 mb-2" href="#"
+            <a
+              class="text-white-50 mb-2"
+              href="about.html#geography"
               ><i class="fa fa-angle-right mr-2"></i
               >Geography</a
             >
